@@ -1,0 +1,19 @@
+files: sample_dataloader.py
+repos:
+    - repo: https://github.com/psf/black
+      rev: 20.8b1
+      hooks:
+        - id: black
+          description: The Uncompromising Python Code Formatter
+    - repo: https://github.com/PyCQA/isort
+      rev: 5.7.0
+      hooks:
+        - id: isort
+          args: [--profile=black, --skip-gitignore]
+          description: Sort Python imports
+    - repo: https://gitlab.com/pycqa/flake8
+      rev: 3.8.4
+      hooks:
+        - id: flake8
+          args: [--statistics]
+          description: Lint Python files
